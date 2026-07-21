@@ -1,7 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Acount() {
+  let isUserLogedin = false;
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (!isUserLogedin) {
+      alert("لطفا اول ثبت نام یا ورود کنید");
+      navigate("/Login");
+    }
+  }, [isUserLogedin, navigate]);
   return (
     <div className="flex h-full w-full items-center justify-start px-8">
       <div className="w-full rounded-xl border border-gray-300 bg-white p-8 shadow-sm">

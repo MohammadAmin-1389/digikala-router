@@ -123,6 +123,25 @@ function Sidebar() {
               </>
             )}
           </NavLink>
+          <div className="my-4 border-b border-gray-200" />
+          <br />
+          <NavLink
+            to="/products"
+            className={({ isActive }) =>
+              `font-bold text-[20px] flex items-center gap-3 transition-all ${
+                isActive ? "text-red-600" : "text-gray-700 hover:text-red-500"
+              }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                {isActive && (
+                  <span className="inline-block h-6 w-1 bg-red-600 rounded-full" />
+                )}
+                محصولات
+              </>
+            )}
+          </NavLink>
         </div>
       </div>
     </div>
