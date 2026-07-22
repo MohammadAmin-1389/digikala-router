@@ -12,23 +12,12 @@ import ProductDetails from "./pages/ProductDetails";
 import Layout from "./Components/Layout";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Approuter from "./router/Approuter";
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Mylists />} />
-          <Route path="/Products" element={<Products />} />
-          <Route path="/Products/:id" element={<ProductDetails />} />
-          <Route path="/Coments" element={<Coments />} />
-          <Route path="/Adres" element={<Adres />} />
-          <Route path="/Acount" element={<Acount />} />
-        </Route>
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="*" element={<Erore />} />
-      </Routes>
+     <Approuter/>
     </div>
   );
 }
